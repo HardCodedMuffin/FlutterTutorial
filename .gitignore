@@ -20,17 +20,14 @@ doc/api/
 *.js.deps
 *.js.map
 
-.dart_tool/
 .DS_Store
 .gradle/
 **/.idea/workspace.xml
 .idea/libraries/Dart_*.xml
-.packages
 .pub/
 .vscode/
 .sandbox/
 artifacts/
-build/
 flutter-gui-tests/.gradle/
 flutter-gui-tests/guitest.log
 flutter-intellij.jar
@@ -42,7 +39,6 @@ lib/jxbrowser/*
 material-design-icons/
 out/
 packages
-pubspec.lock
 releases/
 resources/jxbrowser/jxbrowser.properties
 .idea/encodings.xml
