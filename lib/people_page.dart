@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'app_navigation.dart';
 
 class PeoplePage extends StatefulWidget {
-  const PeoplePage({Key key}) : super(key: key);
+  const PeoplePage({Key? key}) : super(key: key);
 
   @override
   PeoplePageState createState() => PeoplePageState();
@@ -20,7 +20,7 @@ class PeoplePageState extends State<PeoplePage> with MainPageStateMixin {
 
   @override
   void onPageVisible() {
-    MainScreen.of(context).params = AppBarParams(
+    MainScreen.of(context)!.params = AppBarParams(
       title: Text('People'),
       actions: <Widget>[
         IconButton(
@@ -76,6 +76,7 @@ class PeoplePageState extends State<PeoplePage> with MainPageStateMixin {
   }
 
   void _onTapCard(int index) {
-    Scaffold.of(context).showSnackBar(SnackBar(content: Text('Item #$index')));
+    ScaffoldMessenger.of(context)
+        .showSnackBar(SnackBar(content: Text('Item #$index')));
   }
 }

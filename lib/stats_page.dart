@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'app_navigation.dart';
 
 class StatsPage extends StatefulWidget {
-  const StatsPage({Key key}) : super(key: key);
+  const StatsPage({Key? key}) : super(key: key);
 
   @override
   StatsPageState createState() => StatsPageState();
@@ -12,7 +12,7 @@ class StatsPage extends StatefulWidget {
 class StatsPageState extends State<StatsPage> with MainPageStateMixin {
   @override
   void onPageVisible() {
-    MainScreen.of(context).params = AppBarParams(
+    MainScreen.of(context)!.params = AppBarParams(
       title: Text('Stats'),
       actions: <Widget>[
         IconButton(

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'app_navigation.dart';
 
 class TimelinePage extends StatefulWidget {
-  const TimelinePage({Key key}) : super(key: key);
+  const TimelinePage({Key? key}) : super(key: key);
 
   @override
   TimelinePageState createState() => TimelinePageState();
@@ -12,7 +12,7 @@ class TimelinePage extends StatefulWidget {
 class TimelinePageState extends State<TimelinePage> with MainPageStateMixin {
   @override
   void onPageVisible() {
-    MainScreen.of(context).params = AppBarParams(
+    MainScreen.of(context)!.params = AppBarParams(
       title: Text('Timeline'),
       actions: <Widget>[
         IconButton(
